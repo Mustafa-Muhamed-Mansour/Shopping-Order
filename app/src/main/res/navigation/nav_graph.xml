@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.shoppingorder.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_confirmedFragment"
+            app:destination="@id/confirmedFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmedFragment"
+        android:name="com.shoppingorder.order.OrderedFragment"
+        android:label="fragment_confirmed"
+        tools:layout="@layout/fragment_confirmed" >
+        <action
+            android:id="@+id/action_confirmedFragment_self"
+            app:destination="@id/confirmedFragment" />
+    </fragment>
+
+
+</navigation>
